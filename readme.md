@@ -10,7 +10,7 @@ Compatible with Laravel v5.3.21. Not tested below Laravel v5.3.21
 ## Install
 Composer require
 
-	composer require gurinder/laravel-plus-admin-theme  	
+	composer require gurinder/laravel-plus-admin-theme  FolderName	
   	
 Update Node
 

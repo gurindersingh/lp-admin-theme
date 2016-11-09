@@ -2,6 +2,10 @@
 
 <p align="center">
 	<img width="800"src="https://s3.postimg.org/fllgx05dv/image.png">
+	<br>
+	<img width="800"src="https://postimg.org/image/db7bpuic9/0d9670c4/">
+	<br>
+	<img width="800"src="https://postimg.org/image/ej1ft4l85/d1830b6c/">
 </p>
 
 ## Compatibility

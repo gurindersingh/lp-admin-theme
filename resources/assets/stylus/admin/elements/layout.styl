@@ -1,0 +1,84 @@
+/*=== Content ===*/
+.admin
+  display block
+  position relative
+  min-height 100%
+  width 100%
+  clearfix()
+
+/*=== Top bar ===*/
+.top-bar
+  max-height $top-bar-height
+  position fixed
+  width 100%
+  box-shadow(0px 0px 5px rgba(86, 96, 117, 0.15) )
+  top 0
+  height $top-bar-height
+  background $top-bar-background-color
+  border-bottom 1px solid darken($top-bar-background-color, 15%)
+  z-index 1000
+
+  +below('l')
+    padding 0 ($gutter)
+
+/*=== Main Menu ===*/
+.main-menu-wrap
+  display inline-block
+  position absolute
+  width $main-menu-width !important
+  top $top-bar-height
+  min-height 100%
+  overflow hidden
+  background $main-menu-background
+  z-index 4
+  transition(all 300ms ease('ease-in-out-cubic'))
+  backface-visibility hidden
+  clearfix()
+
+/*=== Content ===*/
+.content-wrap
+  position relative
+  width 100%
+  padding-left $main-menu-width
+  top 0
+  bottom 0
+  padding-top $top-bar-height
+  height 100%
+  transition(all 300ms ease('ease-in-out-cubic'))
+  z-index 1
+
+.content
+  position relative
+  height 100%
+  max-height 100%
+  bottom 0
+  width 100%
+  margin-bottom 0
+  display block
+  padding $gutter
+  padding-top ($gutter / 2)
+
+/*=== Main Menu Toggle ===*/
+body.main-menu-expended
+  .main-menu-wrap
+    margin-left -($main-menu-width)
+    transition(all 300ms ease('ease-in-out-cubic'))
+
+  .content-wrap
+    padding-left 0
+    transition(all 300ms ease('ease-in-out-cubic'))
+
++below('l')
+  body
+    .main-menu-wrap
+      margin-left -($main-menu-width)
+      transition(all 300ms ease('ease-in-out-cubic'))
+
+    .content-wrap
+      padding-left 0
+      transition(all 300ms ease('ease-in-out-cubic'))
+
+    &.main-menu-expended
+      .main-menu-wrap
+        margin-left 0
+

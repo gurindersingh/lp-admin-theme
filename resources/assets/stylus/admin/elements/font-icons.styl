@@ -1,0 +1,137 @@
+.display-icon
+  padding 5px
+  margin 5px
+  border 1px solid $clouds
+  transition(all 200ms linear)
+
+  &:hover
+    background-color lighten($clouds, 20%)
+    color $primary
+
+    i
+      color $primary
+  i
+    font-size 18px
+    color $text-color
+    margin-right 5px
+
+/*=== Size ===*/
+for name, size in $font-icon-sizes
+  .fa.{name}
+  .mdi.{name}
+    font-size size
+
+/*=== Shape ===*/
+.fa.round
+.mdi.round
+  background-color $clouds
+  border-radius(50%)
+
+.fa.corner
+.mdi.corner
+  background-color $clouds
+  border-radius(10%)
+
+.fa.square
+.mdi.square
+  background-color $clouds
+
+.fa.outlined
+.mdi.outlined
+  border 1px solid $clouds
+  background-color transparent
+  border-radius(50%)
+
+/*=== Sizes ===*/
+.fa.round
+.mdi.round
+.fa.corner
+.mdi.corner
+.fa.square
+.mdi.square
+.fa.outlined
+.mdi.outlined
+  background transparent
+  border none
+
+.fa.round.xsm
+.mdi.round.xsm
+.fa.corner.xsm
+.mdi.corner.xsm
+.fa.square.xsm
+.mdi.square.xsm
+.fa.outlined.xsm
+.mdi.outlined.xsm
+  padding 10px
+
+.fa.round.sm
+.mdi.round.sm
+.fa.corner.sm
+.mdi.corner.sm
+.fa.square.sm
+.mdi.square.sm
+.fa.outlined.sm
+.mdi.outlined.sm
+  padding 15px
+
+.fa.round.md
+.mdi.round.md
+.fa.corner.md
+.mdi.corner.md
+.fa.square.md
+.mdi.square.md
+.fa.outlined.md
+.mdi.outlined.md
+  padding 20px
+
+.fa.round.lg
+.mdi.round.lg
+.fa.corner.lg
+.mdi.corner.lg
+.fa.square.lg
+.mdi.square.lg
+.fa.outlined.lg
+.mdi.outlined.lg
+  padding 25px
+
+.fa.round.xlg
+.mdi.round.xlg
+.fa.corner.xlg
+.mdi.corner.xlg
+.fa.square.xlg
+.mdi.square.xlg
+.fa.outlined.xlg
+.mdi.outlined.xlg
+  padding 35px
+
+.fa.round
+.mdi.round
+.fa.corner
+.mdi.corner
+.fa.square
+.mdi.square
+  background-color $clouds
+  color $text-color
+
+.fa.outlined
+.mdi.outlined
+  border 1px solid $clouds
+
+/*=== Colors ===*/
+for name, color in $colors
+  .fa.{name}
+  .mdi.{name}
+    color color
+
+  .fa.outlined.{name}
+  .mdi.outlined.{name}
+    border-color color
+
+  .fa.round.{name}
+  .mdi.round.{name}
+  .fa.corner.{name}
+  .mdi.corner.{name}
+  .fa.square.{name}
+  .mdi.square.{name}
+    background-color color
+    color white

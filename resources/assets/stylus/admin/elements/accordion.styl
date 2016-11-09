@@ -1,0 +1,53 @@
+.accordion-group
+  //background grey
+
+.accordion
+  margin-bottom 5px
+
+  &:last-of-type
+    margin-bottom 0
+
+  .heading
+    background lighten($clouds, 30%)
+    border 1px solid darken($clouds, 5%)
+
+    .title
+      margin 0
+
+      a
+        display block
+        padding 10px
+        color $text-color
+        font-size 18px
+        font-family $site-font-family
+        font-weight normal
+
+        &:hover
+        &:focus
+          text-decoration none
+          background $clouds
+
+    &.active
+      a
+        color $primary
+
+  .content
+    display none
+    background white
+    border 1px solid darken($clouds, 5%)
+    border-top 0
+    padding 10px
+
+for name, color in $colors
+  .accordion-group.{name}
+    .accordion
+      .heading
+        background color
+        border-color color
+
+        a
+          color white
+
+          &:hover
+          &:focus
+            background darken(color, 5%)

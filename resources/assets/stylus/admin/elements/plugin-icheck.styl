@@ -1,0 +1,80 @@
+/*=== import base icheck ===*/
+for theme, skins in $icheck
+  for skin in skins
+    @import 'plugins/icheck/' + theme + '/' + skin + '.styl'
+
+/*=== Functions ===*/
+iCheckBackGroundUrl($theme, $skin)
+  if $theme != $skin
+    $path = '../images/icheck/' + $theme + '/' + $skin + '.png'
+    .icheckbox_{$theme}-{$skin}
+    .iradio_{$theme}-{$skin}
+      background-image url($path)
+  if $theme == $skin
+    $path = '../images/icheck/' + $theme + '/' + $skin + '.png'
+    .icheckbox_{$theme}
+    .iradio_{$theme}
+      background-image url($path)
+
+iCheckBackGroundUrlLine($theme, $skin)
+  $path = '../images/icheck/' + $theme + '/line.png'
+  if $theme != $skin
+    .icheckbox_{$theme}-{$skin} .icheck_{$theme}-icon
+    .iradio_{$theme}-{$skin} .icheck_{$theme}-icon
+      background-image url($path)
+  if $theme == $skin
+    .icheckbox_{$theme} .icheck_{$theme}-icon
+    .iradio_{$theme} .icheck_{$theme}-icon
+      background-image url($path)
+
+iCheckBackGroundUrlRetina($theme, $skin)
+  if $theme != $skin
+    @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+      $path = '../images/icheck/' + $theme + '/' + $skin + '@2x.png'
+      .icheckbox_{$theme}-{$skin}
+      .iradio_{$theme}-{$skin}
+        background-image: url($path);
+  if $theme == $skin
+    @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+      $path = '../images/icheck/' + $theme + '/' + $skin + '@2x.png'
+      .icheckbox_{$theme}
+      .iradio_{$theme}
+        background-image: url($path);
+
+iCheckBackGroundUrlRetinaLine($theme, $skin)
+  $path = '../images/icheck/' + $theme + '/line@2x.png'
+  if $theme != $skin
+    @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+      .icheckbox_{$theme}-{$skin} .icheck_{$theme}-icon
+      .iradio_{$theme}-{$skin} .icheck_{$theme}-icon
+        background-image: url($path);
+  if $theme == $skin
+    @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+      .icheckbox_{$theme} .icheck_{$theme}-icon
+      .iradio_{$theme} .icheck_{$theme}-icon
+        background-image: url($path);
+
+/*=== adjust icheck ===*/
+for theme, skins in $icheck
+
+  for skin in skins
+
+    if theme != 'line'
+      iCheckBackGroundUrl(theme, skin)
+      iCheckBackGroundUrlRetina(theme, skin)
+    if theme == 'line'
+      iCheckBackGroundUrlLine(theme, skin)
+      iCheckBackGroundUrlRetinaLine(theme, skin)
+    //if skin != 'flat'
+    //  .icheckbox_{theme}-{skin}
+    //  .iradio_{theme}-{skin}
+    //    $path = '../images/icheck/' + theme + '/' + skin + '.png'
+    //    background-image url($path)
+    //
+    //  @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    //    $path = '../images/icheck/' + theme + '/' + skin + '@2x.png'
+    //    .icheckbox_{theme}-{skin}
+    //    .iradio_{theme}-{skin}
+    //      background-image: url($path);
+
+

@@ -1,0 +1,59 @@
+.modal
+  display none
+  overflow hidden
+  position fixed
+  //visibility hidden
+  top 0
+  right 0
+  bottom 0
+  left 0
+  -webkit-overflow-scrolling touch
+  outline 0
+  z-index 1050
+  background rgba(0, 0, 0, 0.7)
+
+  .dialog
+    width 50%
+    max-width 97%
+    margin 0 auto
+    background white
+    border 1px solid $clouds
+    margin-top 8em
+
+  .heading
+    position relative
+    padding 10px
+    border-bottom 1px solid $clouds
+    clearfix()
+
+    .title
+      position relative
+      float left
+      margin 0
+      font-family $site-font-family
+
+    .close
+      float right
+      color $concrete
+
+  .body
+    padding 10px
+
+  .footer
+    border-top 1px solid $clouds
+    padding 10px
+    clearfix()
+
+  &.full-width
+
+    .dialog
+      width 95%
+
+body.modal-open
+  padding-left ($gutter/2)
+
+  .main-menu-wrap
+    z-index 10
+
+  .content-wrap
+    z-index 20

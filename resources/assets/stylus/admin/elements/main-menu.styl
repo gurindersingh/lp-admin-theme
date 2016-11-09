@@ -1,0 +1,147 @@
+.main-menu
+  display block
+  width $main-menu-width !important
+  padding-top ($gutter / 2)
+  z-index 2
+  padding-bottom 40px
+  clearfix()
+
+/*=== Profile ===*/
+.main-menu-profile-row
+  display block
+  padding 10px
+  clearfix()
+
+.main-menu-profile-img
+  display inline-block
+  float left
+
+.main-menu-profile-img img
+  width 60px
+  height 60px
+  border-radius 50%
+
+.main-menu-profile-info
+  position relative
+  display inline-block
+  float left
+  padding 0 10px
+
+.main-menu-profile-info .title
+  margin-bottom 0
+
+  a
+    color white
+
+.main-menu-profile-info .role
+  color darken(white, 30%)
+
+/*=== Main menu ===*/
+.main-menu-links-row
+  font-family $heading-font-family
+  display block
+  width 100%
+  clearfix()
+
+ul.main-menu
+ul.main-menu ul
+  margin 0
+  list-style none
+  padding 0 0 10px 0
+
+ul.main-menu li
+  position relative
+  display block
+
+
+ul.main-menu li.active
+  //background darken($main-menu-background, 15%)
+
+  > a
+    background darken($main-menu-background, 30%)
+
+ul.main-menu li a
+  padding 10px 10px 10px 40px
+  display block
+  color white
+  font-size $main-menu-font-size
+  line-height $main-menu-line-height
+  font-weight $main-menu-font-weight
+  vertical-align middle
+  transition(all 200ms linear)
+
+  &:hover
+    cursor pointer
+    background $main-menu-hover-background
+    color $main-menu-hover-color
+
+  &:hover
+  &:active
+  &:focus
+    text-decoration none
+
+ul.main-menu li a i
+  position absolute
+  color white
+  left 12px
+  top 10px
+  font-size $main-menu-font-size
+  line-height $main-menu-line-height
+  vertical-align middle
+
+
+ul.main-menu ul
+  display none
+  margin-left 50px
+  border-left 1px solid $main-menu-sub-menu-marker-color
+
+ul.main-menu ul ul
+  margin-left 30px
+
+ul.main-menu ul li
+  position relative
+
+ul.main-menu ul li a
+  padding-left 10px
+  margin-left 10px
+  font-size $sub-menu-font-size
+  line-height $sub-menu-font-size
+  font-family $site-font-family
+  font-weight normal
+
+ul.main-menu ul li
+
+  &:before
+    content " "
+    position absolute
+    top 20px
+    left 0
+    height 1px
+    width 10px
+    border-bottom 1px solid $main-menu-sub-menu-marker-color
+
+ul.main-menu
+
+  i.dropdown-icon
+    position relative !important
+    float right
+    top 0
+    right 5px
+    margin-top 1px
+    margin-right 10px
+    display inline-block
+    font-size 20px
+    font-family Material Design Icons
+    height auto
+    width 20px
+    font-weight 300
+    text-shadow none
+    vertical-align top
+    font-style normal
+
+    &:before
+      content "\F35D"
+
+  li.active > a > i.dropdown-icon
+    &:before
+      content "\F35E"

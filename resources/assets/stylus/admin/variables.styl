@@ -1,0 +1,151 @@
+/*=== Fonts ===*/
+$text-color = $asphalt
+$text-color-dark = $asphalt-dark
+$site-font-family = 'Open Sans', sans-serif
+$font-size-base = 14px
+$line-height-base = 1.428571429
+$line-height-computed = floor($font-size-base * $line-height-base)
+
+/*=== Link ===*/
+$link-color = $primary
+$link-hover-color = $primary-dark
+$link-decoration = none
+$link-decoration-hover = underline
+
+/*=== Scrollbar ===*/
+$customize-scrollbar = true
+$scrollbar-color = $concrete
+$scrollbar-width = 12px
+$customize-textarea-scrollbar = true
+$customize-textarea-scrollbar-color = $concrete
+$customize-textarea-scrollbar-width = 8px
+$side-menu-scrollbar-color = darken($laravel, 10%)
+
+/*=== Headings ===*/
+$heading-font-family = 'Oswald', Arial, Helvetica, sans-serif
+$heading-font-weight = 300
+$h1-font-size = floor($font-size-base * 2.60)
+$h2-font-size = floor($font-size-base * 2.15)
+$h3-font-size = ceil($font-size-base * 1.70)
+$h4-font-size = ceil($font-size-base * 1.25)
+$h5-font-size = $font-size-base
+$h6-font-size = ceil($font-size-base * 0.85)
+
+/*=== Top Bar ===*/
+$top-bar-height = 50px
+$top-bar-background-color = #ffffff
+$top-bar-search-top-margin = 5px
+//$top-bar-small-logo-width = 100px // should not more than $main-menu-width
+
+/*=== Main menu ===*/
+$main-menu-width = 250px
+$main-menu-background = #263238
+$main-menu-hover-background = $laravel
+$main-menu-hover-color = white
+$main-menu-sub-menu-marker-color = lighten($main-menu-background, 20%)
+$main-menu-font-size = 16px
+$main-menu-line-height = 20px
+$main-menu-font-weight = 300
+$sub-menu-font-size = 14px
+
+/*=== Pages ===*/
+$page-background = #f1f1f1
+
+/*=== Selection ===*/
+$selection-background = $primary;
+$selection-text-color = #ffffff;
+
+/*==== Grid Sizes -  12 column ====*/
+$grid-columns = 12
+$max-site-width = 1300px
+$gutter = 30px
+
+/*=== Lost ===*/
+base-gutter = ($gutter / 2)
+@lost gutter base-gutter
+
+/*=== Blockquote ===*/
+$blockquote-font-size = $h4-font-size
+
+/*=== Wells ===*/
+$well-background = $clouds
+$well-border = darken($clouds, 10%)
+
+/*=== Font Icons ===*/
+$font-icon-sizes = {
+  'xsm' : 12px,
+  'sm' : 21px,
+  'md' : 28px,
+  'lg' : 42px,
+  'xlg': 70px,
+}
+
+/*=== Forms ===*/
+$placeholder-color = #999
+$form-background-color = $clouds
+$form-focus-border-color = $info
+$form-focus-background-color = $white
+$form-text-color = $text-color
+$form-text-focus-color = $primary
+
+
+$form-colors = {
+  success: $success
+  info : $info
+  warning : $warning
+  error : $danger
+}
+
+/*=== icheck - Do not include '_all' files from iCheck===*/
+$icheck = {
+  'flat': 'aero' 'blue' 'green' 'grey' 'orange' 'pink' 'purple' 'red' 'yellow' 'flat'
+  'line': 'aero' 'blue' 'green' 'grey' 'orange' 'pink' 'purple' 'red' 'yellow' 'line'
+  'minimal': 'aero' 'blue' 'green' 'grey' 'orange' 'pink' 'purple' 'red' 'yellow' 'minimal'
+  'square': 'aero' 'blue' 'green' 'grey' 'orange' 'pink' 'purple' 'red' 'yellow' 'square'
+  //'futurico': 'futurico' Not Compatible yet
+  //'polaris': 'polaris' Not Compatible yet
+}
+
+/*=== Buttons ===*/
+$button-background-color ?= #EEE
+$button-font-color ?= $text-color
+$button-font-weight ?= normal
+$button-font-size ?= $font-size-base
+$button-height ?= 40px
+$button-font-family ?= $site-font-family
+$button-group-width = 130px
+
+$button-shapes ={
+  'square' : 0
+  'box': 10px
+  'round': 4px
+  'pill': 200px
+  'circle': 100%
+}
+
+$button-sizes = {
+  'xxlg': 1.75
+  'xlg': 1.5
+  'lg': 1.25
+  'md': 1
+  'sm': .8
+  'xs': .7
+}
+
+$button-colors = {
+  primary: $primary $white
+  laravel: $laravel $white
+  success: $success $white
+  info : $info $white
+  purple : $purple $white
+  warning : $warning $white
+  danger : $danger $white
+  sunflower : $sunflower $white
+  orange : $orange $white
+  concrete : $concrete $white
+  asphalt : $asphalt $white
+  plain: $white $text-color
+}
+
+/*=== Auth ===*/
+$auth-background-color = #242735

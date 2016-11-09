@@ -1,0 +1,34 @@
+/*************************
+ Zero margin padding
+*************************/
+.m-0
+  margin 0 !important
+
+.p-0
+  padding 0 !important
+
+$space-names = {
+  't' : 'top',
+  'r' : 'right',
+  'b' : 'bottom',
+  'l' : 'left',
+}
+
+$space-sizes = 0px 5px 10px 15px 20px 30px 40px 50px 60px
+
+for shortName, name in $space-names
+  for size in $space-sizes
+    .m-{size}
+      margin size !important
+
+    .m{shortName}-{size}
+      margin-{name} size !important
+
+
+for shortName, name in $space-names
+  for size in $space-sizes
+    .p-{size}
+      padding size !important
+
+    .p{shortName}-{size}
+      padding-{name} size !important

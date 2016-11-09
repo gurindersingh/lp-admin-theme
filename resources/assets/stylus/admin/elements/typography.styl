@@ -1,0 +1,104 @@
+body
+  color $text-color
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6, .title, .heading
+  font-family $heading-font-family
+  line-height 1.2
+  font-weight: $heading-font-weight
+
+h1, .h1, h2, .h2, h3, .h3
+  margin-top $line-height-computed
+  margin-bottom ($line-height-computed / 2)
+
+  &:first-child
+    margin-top 0
+
+  + h1, + .h1, + h2, + .h2, + h3, + .h3
+    margin-top ($line-height-computed / 2)
+
+h4, .h4, h5, .h5, h6, .h6
+  margin-top ($line-height-computed / 2)
+  margin-bottom ($line-height-computed / 2)
+
+h1, .h1
+  set-font-size($h1-font-size)
+
+h2, .h2
+  font-size 2rem
+
+h3, .h3
+  font-size 1.75rem
+
+h4, .h4
+  font-size 1.5rem
+
+h5, .h5
+  font-size 1.25rem
+
+h6, .h6
+  font-size 1rem;
+
+/*==== Paragraph ====*/
+p
+  -webkit-hyphens auto
+  -epub-hyphens auto
+  -moz-hyphens auto
+  -ms-hyphens auto
+  -o-hyphens auto
+  hyphens auto
+  word-wrap break-word
+  margin 0 0 ($line-height-computed / 2)
+
+/*=== Lead ===*/
+.lead
+  margin-bottom 20px
+  font-size 16px
+  font-weight 300
+  line-height 1.4
+
+/*=== Small ===*/
+small,
+.small
+  font-size 85%
+
+/*=== Font Color ===*/
+//i
+//  transition(all 200ms linear)
+
+/*==== Links ====*/
+a
+  -webkit-transition all 0.2s ease
+  -moz-transition all 0.2s ease
+  -o-transition all 0.2s ease
+  transition all 0.2s ease
+  text-decoration $link-decoration
+  color $link-color
+
+a:hover, a:active, a:focus
+  text-decoration $link-decoration-hover
+  outline none
+  color $link-hover-color
+
+/*=== Selection ===*/
+::selection
+  color $selection-text-color
+  background-color $selection-background
+
+::-moz-selection
+  color $selection-text-color
+  background-color $selection-background
+
+/*=== Text Variations ===*/
+for name, color in $colors
+  .text-{name}
+    color color !important
+
+.light
+  font-weight 100
+
+.bold
+  font-weight 700
+
+.semi-bold
+  font-weight 400

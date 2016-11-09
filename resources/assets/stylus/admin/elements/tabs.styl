@@ -1,0 +1,86 @@
+/*=== Tabs ===*/
+.tab
+  display block
+  width 100%
+  clearfix()
+
+.tab-nav
+  display block
+  margin 0
+  padding 0
+  list-style none
+  border-bottom 1px solid $clouds
+  clearfix()
+
+  > li
+    float left
+
+    a
+      display block
+      padding 10px
+      color $text-color
+      border-bottom 2px solid transparent
+      margin-bottom -1px
+      text-align center
+      font-size 120%
+      transition(all 200ms linear)
+
+      &:hover
+      &:focus
+        text-decoration none
+        color $primary
+
+    &.active
+      a
+        color $primary
+        border-color $primary
+
+    &:first-of-type
+      a
+        color $primary
+        border-color $primary
+
+    &.in-active
+      a
+        color $text-color
+        border-color transparent
+
+.tab-content-wrap
+  display block
+  padding-top 10px
+
+.tab-content
+  display none
+
+  &:first-of-type
+    display block
+
+.tab-nav.justify
+  display table
+  width 100%
+
+  > li
+    float none
+    display: table-cell
+
+.tab.condense
+
+  .tab-nav
+    border 0
+    margin 0
+    > li
+
+      a
+        background $clouds
+        border 1px solid darken($clouds, 6%)
+        color $text-color
+
+      &.active
+        a
+          border-color transparent
+          background $primary
+          color white
+
+  .tab-content-wrap
+    border 1px solid darken($clouds, 6%)
+    padding 20px

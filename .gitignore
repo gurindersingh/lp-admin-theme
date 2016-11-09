@@ -1,0 +1,14 @@
+/node_modules
+/public/storage
+/public/css
+/public/fonts
+/public/images/inkspace
+/public/images/icheck
+/public/js
+/resources/assets/stylus/admin/plugins
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+_ide_helper.php

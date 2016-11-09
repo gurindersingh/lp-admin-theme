@@ -1,0 +1,77 @@
+/*=== Container ===*/
+.container-fluid
+  display block
+  margin 0 auto
+  width 100%
+  clearfix()
+
+.container
+  display block
+  margin 0 auto
+  width 100%
+  max-width $max-site-width
+  clearfix()
+
+/*=== Row ===*/
+.row
+  position relative
+  display block
+  lost-utility clearfix
+  margin-left -($gutter / 2)
+  margin-right -($gutter / 2)
+  clearfix()
+
+/*=== Clearfix ===*/
+.clearfix
+  clearfix()
+
+/*==== Column ====*/
+.col
+  position relative
+  float left
+  min-height 1px
+  padding 0 ($gutter / 2)
+
+/*=== Grid ===*/
+.sm-1, .sm-2, .sm-3, .sm-4, .sm-5, .sm-6, .sm-7, .sm-8, .sm-9, .sm-10, .sm-11, .sm-12,
+.md-1, .md-2, .md-3, .md-4, .md-5, .md-6, .md-7, .md-8, .md-9, .md-10, .md-11, .md-12,
+.lg-1, .lg-2, .lg-3, .lg-4, .lg-5, .lg-6, .lg-7, .lg-8, .lg-9, .lg-10, .lg-11, .lg-12,
+.xlg-1, .xlg-2, .xlg-3, .xlg-4, .xlg-5, .xlg-6, .xlg-7, .xlg-8, .xlg-9, .xlg-10, .xlg-11, .xlg-12
+  width 100%
+  float left
+
+.col.display
+  padding ($gutter / 2)
+  border 1px solid darken($clouds, 15%)
+  background lighten($clouds, 8%)
+  text-transform uppercase
+
+/*=== +mobile() - When the screen size is 400px or less, the styles in the block will take effect. ===*/
++mobile()
+  for num in (1..$grid-columns)
+    .sm-{num}
+      width  divide(100, divide($grid-columns, num) ) + '%'
+      
+/*=== +tablet() - When the screen size is between 1050px and 400px, the styles in the block will take effect. ===*/
++tablet()
+  for num in (1..$grid-columns)
+    .md-{num}
+      width  divide(100, divide($grid-columns, num) ) + '%'
+
+/*=== +desktop() - When the screen size is 1050px or more, the styles in the block will take effect. ===*/
++desktop()
+  for num in (1..$grid-columns)
+    .lg-{num}
+      width  divide(100, divide($grid-columns, num) ) + '%'
+
+/*=== +hd() - When the screen size is 1800px or more, the styles in the block will take effect. ===*/
++hd()
+  for num in (1..$grid-columns)
+    .xlg-{num}
+      width  divide(100, divide($grid-columns, num) ) + '%'
+
+/*=== Offsets ===*/
+.col
+  for num in (1..$grid-columns)
+    .off-{num}
+      margin-left  divide(100, divide($grid-columns, num) ) + '%' !important

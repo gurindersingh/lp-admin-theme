@@ -1,0 +1,256 @@
+.button
+  color $button-font-color
+  background-color $button-background-color
+  border-color $button-background-color
+  font-weight $button-font-weight
+  font-size $button-font-size
+  font-family $button-font-family
+  text-decoration none
+  text-align center
+  line-height $button-height
+  height $button-height
+  padding 0 $button-height
+  margin 0
+  display inline-block
+  appearance none
+  cursor pointer
+  border none
+  box-sizing border-box
+  transition-property all
+  transition-duration 300ms
+  user-select none
+
+.button:visited
+  color: $button-font-color
+
+.button:hover
+.button:focus
+  background-color lighten($button-background-color, 10%)
+  text-decoration none
+  outline none
+
+.button:active
+.button.active
+.button.is-active
+  text-shadow 0 1px 0 rgba(255, 255, 255, .3)
+  text-decoration none
+  background-color desaturate($button-background-color, 10%)
+  border-color darken($button-background-color, 12%)
+  color darken($button-background-color, 50%)
+  transition-duration 0s
+  box-shadow(inset 0 1px 3px rgba(0, 0, 0, .2))
+
+.button.disabled
+.button.is-disabled
+.button:disabled
+  top 0 !important
+  background #EEE !important
+  border 1px solid #DDD !important
+  text-shadow 0 1px 1px rgba(255, 255, 255, 1) !important
+  color #CCC !important
+  cursor default !important
+  appearance none !important
+  box-shadow none !important
+  opacity .8 !important
+
+/*=== Typography ===*/
+.button.uppercase
+   text-transform uppercase
+
+.button.lowercase
+   text-transform lowercase
+
+.button.capitalize
+   text-transform capitalize
+
+.button.small-caps
+   font-variant small-caps
+
+.button.icon-txt-large
+   font-size 36px !important
+
+.button.width-small
+   padding: 0 10px !important
+  
+/*=== Colors ===*/
+for name, detail in $button-colors
+  $name = name
+  $backgroundColor = nth(detail, 0)
+  $textColor = nth(detail, 1)
+
+  .button.{name}
+    background $backgroundColor
+    color $textColor
+
+    &:visited
+      color $textColor
+
+    &:hover
+    &:focus
+      background-color lighten($backgroundColor, 10%)
+      border-color lighten($backgroundColor, 10%)
+      color $textColor
+
+    &:active,
+    &.active,
+    &.is-active
+      background-color desaturate($backgroundColor, 10%);
+      border-color desaturate($backgroundColor, 10%);
+      color darken($backgroundColor, 60%);
+
+.button.plain
+  background transparent
+  border transparent
+  &:visited
+  &:hover
+  &:focus
+  &:active
+  &.active
+  &.is-active
+    background transparent
+    border-color transparent
+
+/*=== Block & Stacked ===*/
+.button.block
+.button.stack
+  display block
+  width 100%
+
+/*=== Shapes ===*/
+for shapeName, shapeDimension in $button-shapes
+  .button.{shapeName}
+    border-radius(shapeDimension)
+
+    if shapeName == box
+      &:before
+      &:after
+        content none
+        display none // .box class already associated with other box
+
+.button.circle
+.button.box
+.button.square
+  padding 0 !important
+  width $button-height
+
+  for sizeName, sizeMultiplier in $button-sizes
+    &.{sizeName}
+      width ($button-height * sizeMultiplier)
+
+/*=== Sizes ===*/
+for sizeName, sizeMultiplier in $button-sizes
+  .button.{sizeName}
+    font-size: $button-font-size * sizeMultiplier;
+    height: $button-height * sizeMultiplier;
+    line-height: $button-height * sizeMultiplier;
+    padding: 0 ($button-height * sizeMultiplier);
+
+/*=== Border ===*/
+.button.border
+  background none
+  border-width 2px
+  border-style solid
+  line-height $button-height - 4
+
+  &:hover
+    background-color rgba(lighten($button-background-color, 10%), .9)
+
+  &:active
+  &.active
+    box-shadow none
+    text-shadow none
+    transition-property all
+    transition-duration 300ms
+
+  &.thin
+    border-width 1px
+  &.thick
+    border-width 3px
+
+.button.border
+.button.border.thin
+.button.border.thick
+  for name, detail in $button-colors
+    $name = name
+    $backgroundColor = nth(detail, 0)
+    $textColor = nth(detail, 1)
+    &.{name}
+      color $backgroundColor
+      border-color $backgroundColor
+
+      &:hover
+      &:focus
+        background-color: $backgroundColor
+        color: $textColor
+        border-color $backgroundColor
+
+      &:active
+      &.active
+      &.is-active
+        background-color: rgba(desaturate($backgroundColor, 1%), .9)
+        color: $textColor
+        opacity .8
+
+  for sizeName, sizeMultiplier in $button-sizes
+    &.{sizeName}
+      line-height ($button-height * sizeMultiplier - 4)
+
+/*=== BorderLess ===*/
+.button.borderless
+  background none
+  border none
+  padding 0 8px !important
+  color $button-font-color
+  font-size $button-font-size * 1.3
+  font-weight 200
+
+  &:hover
+  &:focus
+    background none
+
+  &:active
+  &.active
+  &.is-active
+    box-shadow none
+    text-shadow none
+    transition-property all
+    transition-duration.3s
+    opacity .3
+
+  for name, detail in $button-colors
+    $name = name
+    $backgroundColor = nth(detail, 0)
+    $textColor = nth(detail, 1)
+    &.{$name}
+      color $backgroundColor
+
+  for sizeName, sizeMultiplier in $button-sizes
+    $borderless-font-size = ($button-font-size * sizeMultiplier * 1.3)
+    &.{sizeName}
+      font-size: $borderless-font-size;
+      height: $borderless-font-size + 16;
+      line-height: $borderless-font-size + 16;
+
+
+/*=== Socials ===*/
+social-button($name, $color = #eeeeee, $textColor = white)
+  &.{$name}
+    background $color
+    border-color $color
+    color $textColor
+    &:hover
+    &:focus
+      background-color: rgba($color, .8)
+      color: $textColor
+      border-color $color
+    &:active,
+    &.active,
+    &.is-active
+      background-color desaturate($color, 10%);
+      border-color desaturate($color, 10%);
+      color darken($color, 60%);
+
+.button
+  social-button(facebook, #3C5A99)
+  social-button(google, #C13C30)
+  social-button(twitter, #1DA1F2)

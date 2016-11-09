@@ -1,0 +1,131 @@
+.button-group
+  position relative
+  display inline-block
+  clearfix()
+
+  > .button
+    position relative
+    float left
+    display block
+    border-right-width 0
+
+  > .button-group
+    float left
+
+    &:last-child > .button
+      border-right-width 2px
+
+
+.button-group.round
+
+  > .button-group
+
+    > .button
+      border-radius(0)
+
+    &:first-of-type > .button
+      border-top-left-radius nth($button-shapes, 'round')
+      border-bottom-left-radius nth($button-shapes, 'round')
+
+    &:last-of-type > .button
+      border-top-right-radius nth($button-shapes, 'round')
+      border-bottom-right-radius nth($button-shapes, 'round')
+
+.button-group.pill
+
+  > .button-group
+
+    > .button
+      border-radius(0)
+
+    &:first-of-type > .button
+      border-top-left-radius nth($button-shapes, 'pill')
+      border-bottom-left-radius nth($button-shapes, 'pill')
+
+    &:last-of-type > .button
+      border-top-right-radius nth($button-shapes, 'pill')
+      border-bottom-right-radius nth($button-shapes, 'pill')
+
+/*=== Dropdown ===*/
+.button-group.has-dropdown
+.input-group.has-dropdown
+  position relative
+  float left
+
+  .dropdown-list
+    position absolute
+    padding 0
+    margin 0
+    top 0
+    left 0
+    z-index 1000
+    min-width $button-group-width
+    list-style-type none
+    //background lighten(rgba($button-background-color, .95), 10%)
+    background $white
+    border-style solid
+    border-width 1px
+    border-color darken($button-background-color, 10%)
+    font-family $button-font-family
+    box-shadow(0 2px 7px rgba(0, 0, 0, 0.2))
+    //border-radius 3px
+    box-sizing border-box
+    opacity 0
+    visibility hidden
+    translate2D(0, 10px)
+    transition(all 300ms ease)
+
+    &.below
+      top 100%
+      border-top none
+      border-radius: 0 0 3px 3px;
+
+    &.above
+      bottom 100%
+      top auto
+      border-bottom none
+      border-radius: 3px 3px 0 0;
+      box-shadow(0 -2px 7px rgba(0, 0, 0, 0.2))
+
+    &.active
+      opacity 1
+      visibility visible
+      translate2D(0, 0)
+
+    > li
+      padding 0
+      margin 0
+      display block
+
+      > a
+        display block
+        line-height $button-height
+        font-size  ($button-font-size * .9)
+        padding 5px 10px
+        float none
+        color $button-font-color
+        text-decoration none
+        transition(all 300ms linear)
+
+        &:hover
+          color darken($button-font-color, 3%)
+          //background lighten($button-background-color, 70%)
+          background darken($white, 6%)
+          text-decoration none
+
+        &.divider
+          border-top: 1px solid darken($button-background-color, 10%);
+
+/*=== Justify ===*/
+.button-group.justify
+  width 100%
+  max-width 100%
+  display table
+  > .button-group
+    display table-cell
+    float none
+
+    > .button
+      display block
+      width 100%
+      padding 0

@@ -1,0 +1,144 @@
+.form-group
+  display block
+  width 100%
+  margin-bottom 15px
+
+  .msg
+    font-size 90%
+    color lighten($text-color, 40%)
+    font-style italic
+    margin 5px 0
+
+label
+  display block
+  margin 5px 0
+
+  .help
+    font-size 85%
+    color lighten($text-color, 60%)
+
+input[type="search"]
+  box-sizing(border-box)
+
+input
+textarea
+  position relative
+  border 2px solid $form-background-color
+  background $form-background-color
+  width 100%
+  display block
+  color $button-font-color
+  font-weight normal
+  font-size $button-font-size
+  line-height $button-height
+  height $button-height
+  padding 0 10px
+  margin 0
+  box-sizing border-box
+  transition(all 300ms ease)
+
+  &:focus
+    outline none
+    border-color $form-focus-border-color
+    background $form-focus-background-color
+
+  for sizeName, sizeMultiplier in $button-sizes
+    &.{sizeName}
+      //font-size: $button-font-size * sizeMultiplier;
+      height: $button-height * sizeMultiplier;
+      line-height: $button-height * sizeMultiplier;
+      padding 0 15px
+
+for name, color in $form-colors
+  .form-group.{name}
+  .input-group.{name}
+
+    input
+    textarea
+      border-color color
+
+/*=== Input Group ===*/
+.input-group
+  position relative
+  float left
+  display inline-block
+
+  > .input-group-addon
+    position absolute
+    z-index 99
+    line-height $button-height
+    padding 0 10px
+
+    + input
+      padding 0 30px
+
+  > .input-group-addon.at-end
+    right 0
+    top 0
+
+  for sizeName, sizeMultiplier in $button-sizes
+    &.{sizeName}
+      //font-size: $button-font-size * sizeMultiplier;
+      //height: $button-height * sizeMultiplier;
+      //line-height: $button-height * sizeMultiplier;
+      //padding: 0 ($button-height * sizeMultiplier);
+      .input-group-addon
+        line-height ($button-height * sizeMultiplier)
+
+.input-group.justify
+  width 100%
+  display table
+
+  > .input-group
+    display table-cell
+    float none
+
+    > input
+    > button
+    > .button
+    > .button-group
+      display block
+      width 100%
+      max-width 100%
+
+.input-group
+
+  .input-group
+
+    > .button
+    > button
+    > a.button
+      padding-left 10px
+      padding-right 10px
+
+/*=== Inline ===*/
+.form-group.inline
+  display inline-block
+  float left
+  width auto
+  vertical-align middle
+
+  > label
+  > input
+  > textarea
+    display inline-block
+    width auto
+    
+/*=== Colors ===*/
+input
+textarea
+  for name, color in $form-colors
+    &.{name}
+      border-color color
+
+textarea
+  padding 10px
+  line-height $line-height-base
+  height auto
+  max-width 100%
+
+  &.autosize
+    resize none !important
+
+if $customize-textarea-scrollbar == true
+  scrollbar('textarea', $customize-textarea-scrollbar-color, $customize-textarea-scrollbar-width)

@@ -1,0 +1,27 @@
+.breadcrumb
+  padding 0
+  margin 0
+  list-style none
+  line-height 40px
+
+.breadcrumb > li
+  display inline-block
+  color $text-color
+  a
+    color $concrete
+    text-decoration none
+
+    &:hover
+      text-decoration underline
+
+.breadcrumb > li + li:before
+  padding 0 5px
+  color #ccc
+  content "/\00a0"
+
+.breadcrumb > .active
+  color $concrete-dark
+
++below('l')
+  .breadcrumb
+    display none

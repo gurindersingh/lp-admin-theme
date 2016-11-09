@@ -1,0 +1,73 @@
+.auth
+  background-linear-gradient(135deg, $laravel, 0%, $purple, 100%)
+  color darken($clouds, 20%)
+
+.auth .content-block
+    width 500px
+    max-width 95%
+    margin 0 auto
+    background $auth-background-color
+    padding 50px 0
+    margin-top 2em
+    margin-bottom 2em
+
+.auth .logo-wrap
+    display block
+    text-align center
+    margin-bottom 50px
+
+.auth .logo
+    display inline-block
+    margin 0 auto
+    width 150px
+    position relative
+
+    img
+      display block
+      width 150px
+      height auto
+
+.auth .form
+  .input-group
+    border-color transparent
+    background lighten($auth-background-color, 10%)
+    border-top 1px solid lighten($auth-background-color, 20%)
+
+    &:last-of-type
+      border-bottom 1px solid lighten($auth-background-color, 20%)
+
+    .input-group-addon
+      border-color transparent
+      background transparent
+      color $concrete
+      font-size 20px
+      padding 8px 10px
+      vertical-align middle
+
+    .form-control
+      background transparent
+      border-color transparent
+      padding 30px 40px
+      color $concrete
+
+      &:focus
+        color white
+
+    &.focus
+      .input-group-addon
+        color white
+      .form-control
+        color white
+
+.auth
+  .content-block.register
+    width 700px
+    max-width 95%
+
+  .form.register
+    margin-left  ($gutter / 2)
+    margin-right  ($gutter / 2)
+    .col
+      padding ($gutter / 2)
+    .input-group
+      border 1px solid lighten($auth-background-color, 20%)

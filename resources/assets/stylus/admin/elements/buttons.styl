@@ -137,14 +137,6 @@ for shapeName, shapeDimension in $button-shapes
     &.{sizeName}
       width ($button-height * sizeMultiplier)
 
-/*=== Sizes ===*/
-for sizeName, sizeMultiplier in $button-sizes
-  .button.{sizeName}
-    font-size: $button-font-size * sizeMultiplier;
-    height: $button-height * sizeMultiplier;
-    line-height: $button-height * sizeMultiplier;
-    padding: 0 ($button-height * sizeMultiplier);
-
 /*=== Border ===*/
 .button.border
   background none
@@ -194,6 +186,20 @@ for sizeName, sizeMultiplier in $button-sizes
   for sizeName, sizeMultiplier in $button-sizes
     &.{sizeName}
       line-height ($button-height * sizeMultiplier - 4)
+
+/*=== Sizes ===*/
+for sizeName, sizeMultiplier in $button-sizes
+  .button.{sizeName}
+    font-size: $button-font-size * sizeMultiplier;
+    height: $button-height * sizeMultiplier;
+    line-height: $button-height * sizeMultiplier;
+    padding: 0 ($button-height * sizeMultiplier);
+
+    &.shrink
+      $height = ( ($button-height * sizeMultiplier) * .8)
+      line-height $height
+      height $height
+      padding 0 8px
 
 /*=== BorderLess ===*/
 .button.borderless

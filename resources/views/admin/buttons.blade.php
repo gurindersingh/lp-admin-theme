@@ -74,6 +74,15 @@
                                 <button class="m-5 button royal circle info xxlg"><i class="fa fa-plus"></i>
                                 </button>
                             </div>
+                            <div class="col lg-12 text-center">
+                                <h3 class="mt-30">Shrinked</h3>
+                                <a href="#" class="m-5 shrink button xs">XS</a>
+                                <a href="#" class="m-5 shrink button sm">SM</a>
+                                <a href="#" class="m-5 shrink button md">MD</a>
+                                <button class="m-5 shrink button lg">LG</button>
+                                <button class="m-5 shrink button xlg">XLG</button>
+                                <button class="m-5 shrink button xxlg">XXLG</button>
+                            </div>
                             <div class="col lg-12 text-center mt-10">
                                 <h3 class="mt-30">Bordered</h3>
                                 <button class="m-5 button lg circle border"><i class="fa fa-reply"></i>

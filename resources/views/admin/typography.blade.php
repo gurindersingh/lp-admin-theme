@@ -44,6 +44,12 @@
                         <li>Lorem ipsum.</li>
                         <li>Lorem ipsum.</li>
                     </ol>
+                    <h3>Shrink Unordered List</h3>
+                    <ul class="shrink">
+                        <li>Lorem ipsum.</li>
+                        <li>Lorem ipsum.</li>
+                        <li>Lorem ipsum.</li>
+                    </ul>
                 </main>
             </section>
         </div>

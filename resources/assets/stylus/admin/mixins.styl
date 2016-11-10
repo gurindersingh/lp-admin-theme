@@ -116,3 +116,10 @@ background-linear-gradient(startPoint, startColor, startInterval, endColor, endI
   background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
   background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
   background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+
+/*=== User select mixin ===*/
+user-select($value = none)
+  -webkit-user-select: $value;  /* Chrome all / Safari all */
+  -moz-user-select: $value;     /* Firefox all */
+  -ms-user-select: $value;      /* IE 10+ */
+  user-select: $value;

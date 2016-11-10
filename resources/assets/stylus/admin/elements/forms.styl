@@ -12,6 +12,7 @@
 label
   display block
   margin 5px 0
+  user-select(none)
 
   .help
     font-size 85%
@@ -142,3 +143,18 @@ textarea
 
 if $customize-textarea-scrollbar == true
   scrollbar('textarea', $customize-textarea-scrollbar-color, $customize-textarea-scrollbar-width)
+  
+/*=== Checkbox and Radio Default ===*/
+input[type="checkbox"]
+input[type="radio"]
+  display inline-block
+  width auto
+  vertical-align middle
+  user-select(none)
+
+  for sizeName, sizeMultiplier in $button-sizes
+    &.{sizeName}
+      height: $button-height * sizeMultiplier;
+      line-height: $button-height * sizeMultiplier;
+      padding 0 15px
+      vertical-align middle

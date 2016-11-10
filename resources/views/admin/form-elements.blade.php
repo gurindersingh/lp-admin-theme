@@ -268,6 +268,25 @@
                             @endforeach
 
                         </div>
+                        <h3 class="mb-20 mt-30">Default Input Checkbox and radio</h3>
+                        <div class="row">
+                            <div class="col lg-4">
+                                <label>
+                                    <input type="checkbox"> Default Checkbox
+                                </label>
+                                <label>
+                                    <input class="md" type="checkbox"> Default Checkbox
+                                </label>
+                            </div>
+                            <div class="col lg-4">
+                                <label>
+                                    <input name="d-radio" type="radio"> Default radio
+                                </label>
+                                <label>
+                                    <input name="d-radio" class="md" type="radio"> Default radio
+                                </label>
+                            </div>
+                        </div>
                         <h3 class="mb-20 mt-30">Textarea</h3>
                         <h5>Default Textarea</h5>
                         <textarea name="" id="" rows="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias architecto at, blanditiis commodi, consectetur consequatur debitis deleniti, excepturi ipsum molestias nostrum quisquam reprehenderit vel vero. A accusamus consequatur cupiditate dicta dolor dolorem dolores excepturi explicabo illo itaque laudantium non numquam obcaecati officiis quae rerum similique, tempora ut voluptatem voluptates.</textarea>

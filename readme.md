@@ -27,6 +27,10 @@ Update Composer
 Run Gulp Setup
 
 	gulp setup
+
+Update gulpfile
+-Edit browserSync proxy to your example.dev domain
+
 	  	    
 ## License
 

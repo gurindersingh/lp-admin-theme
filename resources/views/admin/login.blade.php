@@ -15,6 +15,15 @@
         <form action="">
             <div class="row form">
                 <div class="col lg-12">
+                    <div class="alert danger">
+                        <ul class="alert-messages">
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col lg-12">
                     <div class="input-group justify lg">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                         <input type="text" class="form-control lg" placeholder="Email or username...">

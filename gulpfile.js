@@ -34,10 +34,6 @@ gulp.task('setup', [], function () {
     gulp.src(paths.node + "/mdi/css/materialdesignicons.css")
         .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));
 
-    // /*=== Perfect scrollbar  -  https://github.com/noraesae/perfect-scrollbar ===*/
-    // gulp.src(paths.node + "/perfect-scrollbar/dist/css/perfect-scrollbar.css")
-    //     .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));
-
     /*=== iCheck ===*/
     gulp.src(paths.node + "/icheck/skins/*/*.png")
         .pipe(gulp.dest(paths.public + '/images/icheck'));
@@ -52,7 +48,7 @@ gulp.task('setup', [], function () {
     gulp.src(paths.node + "/tipso/src/tipso.css")
         .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));
 
-    /*=== Tipso ===*/
+    /*=== Morris ===*/
     gulp.src(paths.node + "/morris.js/morris.css")
         .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));
 });

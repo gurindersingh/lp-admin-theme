@@ -1,7 +1,7 @@
 # Laravel Plus Admin Theme
 
 <p align="center">
-	<img width="800"src="https://s3.postimg.org/fllgx05dv/image.png">
+	<img width="800"src="https://s15.postimg.org/rbmitw78b/Dashboard_Responsive.png">
 	<br>
 	<img width="800"src="https://s12.postimg.org/3qnp2yt0d/image.png">
 	<br>

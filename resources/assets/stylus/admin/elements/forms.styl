@@ -23,6 +23,7 @@ input[type="search"]
 
 input
 textarea
+select
   position relative
   border 2px solid $form-background-color
   background $form-background-color
@@ -56,6 +57,7 @@ for name, color in $form-colors
 
     input
     textarea
+    select
       border-color color
 
 /*=== Input Group ===*/
@@ -122,12 +124,14 @@ for name, color in $form-colors
   > label
   > input
   > textarea
+  > select
     display inline-block
     width auto
     
 /*=== Colors ===*/
 input
 textarea
+select
   for name, color in $form-colors
     &.{name}
       border-color color

@@ -312,6 +312,73 @@
                                 <textarea name="" id="" class="autosize info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet blanditiis commodi debitis doloremque eum id inventore maxime odit sint!</textarea>
                             </div>
                         </div>
+
+                        <div class="row mt-20">
+                            <div class="col lg-12">
+                                <h3>Select box</h3>
+                            </div>
+                            <div class="col lg-6 clearfix">
+                                <div class="form-group">
+                                    <label for="form-1" class="form-label">Extra Small size <span class="help">Extra Small in size</span></label>
+                                    <input type="text" id="form-1" class="form-control xs" placeholder="Placeholder...">
+                                    <p class="msg">Description message...</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-1" class="form-label">Small size <span class="help">Small in size</span></label>
+                                    <input type="text" id="form-1" class="form-control sm" placeholder="Placeholder...">
+                                    <p class="msg">Description message...</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-1" class="form-label">Medium Size - Default <span class="help">Medium in size</span></label>
+                                    <input type="text" id="form-1" class="form-control md" placeholder="Placeholder...">
+                                    <p class="msg">Description message...</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-1" class="form-label">Large Size - Default <span class="help">Large in size</span></label>
+                                    <input type="text" id="form-1" class="form-control lg" placeholder="Placeholder...">
+                                    <p class="msg">Description message...</p>
+                                </div>
+                            </div>
+                            <div class="col lg-6 clearfix">
+                                <div class="form-group">
+                                    <label for="select-form-1" class="form-label">Extra Small size <span class="help">Extra Small in size</span></label>
+                                    <select name="select-form-1" id="select-form-1" class="form-control xs">
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                    </select>
+                                    <p class="msg">Description message...</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-1" class="form-label">Small size <span class="help">Small in size</span></label>
+                                    <select name="select-form-1" id="select-form-1" class="form-control sm">
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                    </select>
+                                    <p class="msg">Description message...</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-1" class="form-label">Medium Size - Default <span class="help">Medium in size</span></label>
+                                    <select name="select-form-1" id="select-form-1" class="form-control md">
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                    </select>
+                                    <p class="msg">Description message...</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-1" class="form-label">Large Size - Default <span class="help">Large in size</span></label>
+                                    <select name="select-form-1" id="select-form-1" class="form-control lg">
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                        <option value="">Value 1</option>
+                                    </select>
+                                    <p class="msg">Description message...</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </main>
                 </section>
             </div>

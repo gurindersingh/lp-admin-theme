@@ -68,7 +68,7 @@
                             <div class="col lg-3">
                                 <div class="form-group disabled">
                                     <label for="form-7">Disabled</label>
-                                    <input type="text" id="form-7" class="form-control" placeholder="Placeholder...">
+                                    <input type="text" id="form-7" class="form-control" disabled placeholder="Placeholder...">
                                 </div>
                             </div>
                             <div class="col lg-3">

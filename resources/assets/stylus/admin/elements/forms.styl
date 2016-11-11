@@ -162,3 +162,19 @@ input[type="radio"]
       line-height: $button-height * sizeMultiplier;
       padding 0 15px
       vertical-align middle
+      
+/*=== Disabled ===*/
+input[disabled]
+input[readonly]
+textarea[disabled]
+textarea[readonly]
+select[disabled]
+select[readonly]
+fieldset[disabled]
+fieldset[readonly]
+input.disabled
+textarea.disabled
+select.disabled
+fieldset.disabled
+  cursor not-allowed !important
+  background darken($form-background-color, 14%)

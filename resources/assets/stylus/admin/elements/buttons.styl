@@ -188,6 +188,9 @@ for shapeName, shapeDimension in $button-shapes
       line-height ($button-height * sizeMultiplier - 4)
 
 /*=== Sizes ===*/
+.button.shrink
+  padding 0 8px
+
 for sizeName, sizeMultiplier in $button-sizes
   .button.{sizeName}
     font-size: $button-font-size * sizeMultiplier;

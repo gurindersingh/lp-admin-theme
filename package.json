@@ -6,7 +6,6 @@
   },
   "devDependencies": {
     "autosize": "^3.0.18",
-    "chart.js": "^2.3.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-notify": "^2.2.0",
@@ -22,8 +21,10 @@
     "mdi": "^1.7.22",
     "morris.js": "^0.5.0",
     "poststylus": "^0.2.3",
+    "quill": "^1.1.5",
     "raphael": "^2.2.6",
     "rupture": "^0.6.2",
+    "summernote": "^0.8.2",
     "tipso": "^1.0.8",
     "vue": "^2.0.1",
     "vue-resource": "^1.0.3"

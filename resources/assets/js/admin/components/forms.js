@@ -4,7 +4,7 @@ import autosize from 'autosize'
 export default class Form {
 
     static InputGroup(inputGroupClass) {
-        let inputGroups = this.alerts = document.getElementsByClassName(inputGroupClass);
+        let inputGroups = document.getElementsByClassName(inputGroupClass);
 
         Array.from(inputGroups).forEach(inputGroup => {
             $(inputGroup).focusin(function () {
@@ -73,5 +73,75 @@ export default class Form {
 
     static autosizeTextarea(textAreaClass) {
         return autosize(document.querySelectorAll(textAreaClass));
+    }
+
+    static initilizeFile(fileWrapperClass) {
+        let fileWrappers = document.getElementsByClassName(fileWrapperClass);
+
+        Array.from(fileWrappers).forEach(fileWrap => this.performFileInput(fileWrap));
+    }
+
+    static performFileInput(fileWrap) {
+
+        let input = $(fileWrap).find('input');
+
+        let ismultiple = $(input).prop('multiple');
+
+        let imagePreviewBlock = $(fileWrap).find('.preview');
+
+        let fileName = $(fileWrap).find('.file-name');
+
+        let errorWrap = $(fileWrap).find('.error-wrap');
+
+        let error = "";
+
+        $(input).on('change', function () {
+
+            $(imagePreviewBlock).html("");
+
+            $(fileName).html("Choose file please... ");
+
+            let regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
+
+            if( $.trim($(this).val()) == "" ) return;
+            
+            if( $(this).val() != undefined ){
+
+                var files = $(this.files);
+                
+                $(imagePreviewBlock).html("");
+
+                $(files).each(function () {
+                    var file = $(this)[0];
+
+                    if( regex.test(file.name.toLowerCase()) )
+                    {
+                        error = "";
+                        $(errorWrap).html("");
+                        var path = (window.URL || window.webkitURL).createObjectURL(file);
+                        var img = $("<img />");
+                        // img.attr("style", "height:100px;width: 100px; margin:10px; position:relative; float:left");
+                        // img.attr("class", "img-thumbnail");
+                        img.attr("src", path);
+                        $(imagePreviewBlock).append(img);
+
+                        if( ismultiple )
+                        {
+                            $(fileName).html("Preview below...");
+                        } else {
+                            $(fileName).html(file.name);
+                        }
+                    } else {
+                        error = "Image only with extension .jpg | .jpeg | .png are accepted as a valid image"
+                        $(errorWrap).html(error);
+                        $(fileName).html("Choose correct file please... ");
+                    }
+
+                });
+
+            }
+
+        });
+
     }
 }

@@ -178,3 +178,53 @@ select.disabled
 fieldset.disabled
   cursor not-allowed !important
   background darken($form-background-color, 14%)
+  
+/*=== File Uploader ===*/
+.file-uploader
+
+  .label
+
+    .head
+      display block
+
+    .control-wrap
+      width 100%
+      height $button-height
+      background $form-background-color
+      margin-top 8px
+
+      .button-text
+      .file-name
+        float left
+        display block
+        height $button-height
+        line-height $button-height
+
+      .file-name
+        padding 0 10px
+
+    .file-input
+      display none
+
+  .preview
+
+    img
+      float left
+      display inline-block
+      height 90px
+      width auto
+      margin 10px
+      border 4px solid $concrete
+
+/*=== Size ===*/
+.file-uploader
+  for sizeName, sizeMultiplier in $button-sizes
+    &.{sizeName}
+      .control-wrap
+        height: $button-height * sizeMultiplier;
+
+        .button-text
+        .button
+        .file-name
+          height $button-height * sizeMultiplier;
+          line-height: $button-height * sizeMultiplier;

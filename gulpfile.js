@@ -51,6 +51,14 @@ gulp.task('setup', [], function () {
     /*=== Morris ===*/
     gulp.src(paths.node + "/morris.js/morris.css")
         .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));
+
+    /*=== Quill ===*/
+    gulp.src(paths.node + "/quill/dist/quill.bubble.css")
+        .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));
+    gulp.src(paths.node + "/quill/dist/quill.snow.css")
+        .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));
+    gulp.src(paths.node + "/quill/dist/quill.core.css")
+        .pipe(gulp.dest(paths.adminStylusSource + '/plugins'));    
 });
 
 /*=== Elixir ===*/

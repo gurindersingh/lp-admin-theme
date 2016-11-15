@@ -5,12 +5,12 @@ import _ from 'lodash';
 window._ = _;
 
 /*=== Load VUE ===*/
-window.Vue = require('vue');
-require('vue-resource');
-Vue.http.interceptors.push((request, next) => {
-    request.headers.set('X-CSRF-TOKEN', LaravelPlus.csrfToken);
-    next();
-});
+// window.Vue = require('vue');
+// require('vue-resource');
+// Vue.http.interceptors.push((request, next) => {
+//     request.headers.set('X-CSRF-TOKEN', LaravelPlus.csrfToken);
+//     next();
+// });
 
 /*=== Load LaravelPlus ===*/
 window.LaravelPlus = Window.LaravelPlus || {};
@@ -55,6 +55,7 @@ import { MorrisChart } from './components/charts'
     Form.InputGroup('input-group');
     Form.iCheckLoad('input.icheck');
     Form.autosizeTextarea('textarea.autosize');
+    Form.initilizeFile('file-uploader');
 
     /*=== Modal ===*/
     Modal.initialize('modal-button');

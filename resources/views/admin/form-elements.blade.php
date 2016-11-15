@@ -379,6 +379,48 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col lg-12 mt-20">
+                                <div class="file-uploader lg">
+                                    <label class="label">
+                                        <span class="head">Upload File</span>
+                                        <div class="control-wrap">
+                                            <div class="button-text">
+                                                <div class="button shrink lg primary">
+                                                    <i class="mdi mdi-file"></i>
+                                                    Upload File
+                                                </div>
+                                            </div>
+                                            <div class="file-name">Nothing uploaded yet...</div>
+                                        </div>
+                                        <input name="file-upload-field" type="file" class="file-input">
+                                    </label>
+                                    <div class="error-wrap text-danger"></div>
+                                    <div class="preview"></div>
+                                </div>
+                            </div>
+
+                            <div class="col lg-12 mt-20">
+                                <div class="file-uploader lg">
+                                    <label class="label">
+                                        <span class="head">Upload Multiple File</span>
+                                        <div class="control-wrap">
+                                            <div class="button-text">
+                                                <div class="button shrink lg primary">
+                                                    <i class="mdi mdi-file"></i>
+                                                    Upload Multiple File
+                                                </div>
+                                            </div>
+                                            <div class="file-name">Nothing uploaded yet...</div>
+                                        </div>
+                                        <input name="file-upload-field" type="file" class="file-input" multiple>
+                                    </label>
+                                    <div class="error-wrap text-danger"></div>
+                                    <div class="preview"></div>
+                                </div>
+                            </div>
+                        </div>
+
                     </main>
                 </section>
             </div>

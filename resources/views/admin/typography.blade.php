@@ -50,6 +50,30 @@
                         <li>Lorem ipsum.</li>
                         <li>Lorem ipsum.</li>
                     </ul>
+                    <h3>Justified Flat List Horizontal</h3>
+                    <ul class="flat-list-h">
+                        <li>Flat one</li>
+                        <li>Flat two</li>
+                        <li>Flat three</li>
+                    </ul>
+                    <h3>Justified Flat List Horizontal with background </h3>
+                    <ul class="flat-list-h background">
+                        <li>Flat one</li>
+                        <li>Flat two</li>
+                        <li>Flat three</li>
+                    </ul>
+                    <h3>Pagination</h3>
+                    <ul class="pagination">
+                        <li><a href="#"><<</a></li>
+                        <li><a href="#"><</a></li>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">></a></li>
+                        <li><a href="#">>></a></li>
+                    </ul>
                 </main>
             </section>
         </div>

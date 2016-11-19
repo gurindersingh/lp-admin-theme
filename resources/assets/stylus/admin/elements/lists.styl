@@ -1,0 +1,60 @@
+.flat-list-h
+  list-style none
+  display table
+  border 1px solid transparent
+  vertical-align middle
+  width 100%
+  margin 0
+  padding 0
+
+  > li
+    float none
+    display table-cell
+    vertical-align middle
+    padding 10px
+    width auto
+
+.flat-list-h.background
+  background $clouds
+
+  &:hover
+    background darken($clouds, 10%)
+
+/*=== Pagination ===*/
+.pagination
+  list-style none
+  margin 0
+  padding 0
+  clearfix()
+
+  > li
+    float left
+    border 1px solid $clouds
+    border-left-width  0
+
+    &:first-of-type
+      border-top-left-radius 3px
+      border-bottom-left-radius 3px
+      border-left-width 1px
+
+    &:last-of-type
+      border-top-right-radius 3px
+      border-bottom-right-radius 3px
+
+    a
+      display block
+      padding 8px 12px
+      line-height 20px
+      vertical-align middle
+      color $text-color
+      transition(all 200ms ease)
+
+      &:hover
+        background $clouds
+        text-decoration none
+
+    &.active
+
+      a
+        background $primary
+        color white

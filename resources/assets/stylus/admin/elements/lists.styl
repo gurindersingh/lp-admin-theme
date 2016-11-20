@@ -42,9 +42,11 @@
       border-bottom-right-radius 3px
 
     a
+    span
       display block
-      padding 8px 12px
-      line-height 20px
+      height $paginator-height
+      line-height $paginator-height
+      padding 0 ($paginator-height / 2.7)
       vertical-align middle
       color $text-color
       transition(all 200ms ease)
@@ -54,7 +56,18 @@
         text-decoration none
 
     &.active
+      border-top-color $primary
+      border-bottom-color $primary
 
-      a
+      span
         background $primary
         color white
+
+.pagination > li.disabled
+
+  span
+    color $concrete
+    cursor not-allowed
+
+    &:hover
+      background none
